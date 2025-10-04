@@ -1,0 +1,127 @@
+/* Plano de fundo */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('MainBackGround.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Caixa genérica */
+.overlay-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+/* Caixa de diálogo */
+#dialog-box {
+  width: 90%;
+  max-width: 900px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: left;
+  min-height: 80px;
+}
+
+/* Inventário */
+#inventory-box {
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.inventory-item {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  border: 1px solid #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inventory-item img {
+  width: 40px;
+}
+
+/* Caixa de escolhas (formato 2x2) */
+#choices-box {
+  width: 90%;
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.choice {
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s;
+  padding: 10px;
+}
+.choice img {
+  width: 32px;
+}
+.choice:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Status */
+#status-box {
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Ícone de configurações */
+#settings-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/* Menu de configurações */
+#settings-box {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  width: 160px;
+  font-size: 14px;
+  z-index: 99;
+}
+.settings-option {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.settings-option:hover {
+  text-decoration: underline;
+}
+
+/* Esconder */
+.hidden {
+  display: none;
+}

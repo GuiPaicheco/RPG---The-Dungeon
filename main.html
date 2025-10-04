@@ -1,19 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Plano de Fundo com Imagem</title>
-    <style>
-        body {
-            background-image: url('MainBackGround.png');
-            background-size: cover; 
-            background-repeat: no-repeat;
-            background-position: center;
-            min-height: 100vh;
-            background-color: #cccccc;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecos da Pedra Abissal</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Ícone de configurações -->
+  <img src="config.png" alt="Configurações" id="settings-icon" onclick="toggleSettings()" />
+
+  <!-- Menu de configurações -->
+  <div id="settings-box" class="overlay-box hidden">
+    <div class="settings-option">🔊 Som: On</div>
+    <div class="settings-option">🎵 Música: Off</div>
+    <div class="settings-option" onclick="salvarJogo()">💾 Salvar Jogo</div>
+  </div>
+
+  <!-- Caixa de diálogo -->
+  <div id="dialog-box" class="overlay-box">
+    <p>🌌 Você desperta na Dungeon de Eidolon...</p>
+  </div>
+
+  <!-- Inventário -->
+  <div id="inventory-box" class="overlay-box">
+    <div class="inventory-item" title="Poção de Cura"><img src="potion.png" /></div>
+    <div class="inventory-item"></div>
+    <div class="inventory-item"></div>
+    <div class="inventory-item"></div>
+  </div>
+
+  <!-- Caixa de escolhas -->
+  <div id="choices-box">
+    <div class="choice overlay-box" onclick="explorar()">
+      <img src="icons/explore.png" /><br>Explorar
+    </div>
+    <div class="choice overlay-box" onclick="descansar()">
+      <img src="icons/rest.png" /><br>Descansar
+    </div>
+    <div class="choice overlay-box" onclick="fugir()">
+      <img src="icons/run.png" /><br>Fugir
+    </div>
+    <div class="choice overlay-box" onclick="usarItem()">
+      <img src="icons/item.png" /><br>Usar Item
+    </div>
+  </div>
+
+  <!-- Status do jogador -->
+  <div id="status-box" class="overlay-box">
+    <p><strong>Nome:</strong> Guilherme (Mago Arcano)</p>
+    <p><strong>HP:</strong> <span id="hp">100</span> | <strong>MP:</strong> <span id="mp">50</span></p>
+    <p><strong>Andar:</strong> <span id="andar">+30</span></p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
